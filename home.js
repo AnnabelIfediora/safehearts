@@ -1,10 +1,10 @@
-// Welcome message
-let userName = prompt("What is your name?");
-if (!userName) {
-  alert("Welcome!");
-} else {
-  alert("Welcome " + userName);
-}
+// // Welcome message
+// let userName = prompt("What is your name?");
+// if (!userName) {
+//   alert("Welcome!");
+// } else {
+//   alert("Welcome " + userName);
+// }
 
 // Mobile menu
 const hamburger = document.getElementById("hamburger");
@@ -41,3 +41,4 @@ themeToggle.addEventListener("click", () => {
     moonIcon.style.display = "inline";
   }
 });
+
