@@ -1,116 +1,889 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Safe Hearts</title>
-
-  <link rel="icon" href="red shield heart.ico">
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="home.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SafeHearts | Mental Health Awareness & Support</title>
+  <meta name="description" content="A modern, supportive platform for mental health awareness. Share your story, access resources, and find your community." />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
 
-<header>
-  <div class="main">
-    <div class="brand">
-      <i class="fa-solid fa-shield-heart my-logo"></i>
-      <h1 class="title">Safe Hearts</h1>
+  <!-- Animated Background -->
+  <div class="bg-animation">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="loader-ring">
+      <div class="ring ring-1"></div>
+      <div class="ring ring-2"></div>
+      <div class="ring ring-3"></div>
+      <div class="loader-heart">
+        <i class="fas fa-heart"></i>
+      </div>
+    </div>
+    <h2>SafeHearts</h2>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="#home" class="logo">
+          <div class="logo-icon">
+            <i class="fas fa-heart-pulse"></i>
+          </div>
+          <span class="logo-text">Safe<span>Hearts</span></span>
+        </a>
+
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#stories" class="nav-link">Stories</a></li>
+          <li><a href="#resources" class="nav-link">Resources</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="#contact" class="btn-nav">
+            <i class="fas fa-hands-helping"></i>
+            <span>Get Help</span>
+          </a>
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-left">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            <span>Your Safe Space</span>
+          </div>
+          <h1 class="hero-title">
+            Mental Health
+            <span class="gradient-text">Matters</span>
+            <br />
+            You Are Not Alone
+          </h1>
+          <p class="hero-description">
+            A welcoming platform where you can find reliable information, share your story, 
+            and connect with a supportive community. Your journey to wellness starts here.
+          </p>
+          <div class="hero-buttons">
+            <a href="#services" class="btn btn-primary">
+              <span>Explore Resources</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="#stories" class="btn btn-outline">
+              <i class="fas fa-book-open"></i>
+              <span>Read Stories</span>
+            </a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <div class="stat-number">10K+</div>
+              <div class="stat-label">Stories Shared</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <div class="stat-number">500+</div>
+              <div class="stat-label">Resources</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <div class="stat-number">24/7</div>
+              <div class="stat-label">Support</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="hero-visual">
+            <div class="main-circle">
+              <div class="circle-content">
+                <i class="fas fa-hand-holding-heart"></i>
+                <span>Support</span>
+              </div>
+            </div>
+            <div class="floating-element el-1">
+              <i class="fas fa-brain"></i>
+              <span>Mind</span>
+            </div>
+            <div class="floating-element el-2">
+              <i class="fas fa-comments"></i>
+              <span>Talk</span>
+            </div>
+            <div class="floating-element el-3">
+              <i class="fas fa-heart"></i>
+              <span>Love</span>
+            </div>
+            <div class="floating-element el-4">
+              <i class="fas fa-seedling"></i>
+              <span>Grow</span>
+            </div>
+            <div class="orbit-ring"></div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="search-container">
-      <input type="search" class="search" placeholder="Search...">
-      <button id="theme-toggle">
-        <i class="fa-solid fa-sun" id="sun-icon"></i>
-        <i class="fa-solid fa-moon" id="moon-icon"></i>
+    <div class="scroll-indicator">
+      <div class="mouse">
+        <div class="wheel"></div>
+      </div>
+      <span>Scroll Down</span>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">
+          <i class="fas fa-sparkles"></i>
+          <span>What We Offer</span>
+        </div>
+        <h2 class="section-title">
+          Supporting Your
+          <span class="gradient-text">Mental Wellness</span>
+        </h2>
+        <p class="section-subtitle">
+          Comprehensive resources and a caring community to guide you through every step of your journey
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="card-header">
+            <div class="card-icon">
+              <i class="fas fa-book-medical"></i>
+            </div>
+            <div class="card-number">01</div>
+          </div>
+          <h3>Learn About Mental Health</h3>
+          <p>
+            Access expert-reviewed information about various mental health conditions. 
+            Understand symptoms, causes, and treatment options to make informed decisions.
+          </p>
+          <ul class="feature-list">
+            <li><i class="fas fa-check"></i> Expert-reviewed content</li>
+            <li><i class="fas fa-check"></i> Condition guides</li>
+            <li><i class="fas fa-check"></i> Treatment options</li>
+          </ul>
+          <a href="#resources" class="card-link">
+            <span>Explore Resources</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="service-card featured">
+          <div class="featured-badge">
+            <i class="fas fa-star"></i>
+            <span>Most Popular</span>
+          </div>
+          <div class="card-header">
+            <div class="card-icon">
+              <i class="fas fa-share-nodes"></i>
+            </div>
+            <div class="card-number">02</div>
+          </div>
+          <h3>Share Your Story</h3>
+          <p>
+            Your voice matters. Share your experiences in a safe, anonymous space. 
+            Connect with others who understand and find comfort in shared experiences.
+          </p>
+          <ul class="feature-list">
+            <li><i class="fas fa-check"></i> Anonymous sharing</li>
+            <li><i class="fas fa-check"></i> Supportive community</li>
+            <li><i class="fas fa-check"></i> Moderated content</li>
+          </ul>
+          <a href="#stories" class="card-link">
+            <span>Share Your Story</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="service-card">
+          <div class="card-header">
+            <div class="card-icon">
+              <i class="fas fa-quote-right"></i>
+            </div>
+            <div class="card-number">03</div>
+          </div>
+          <h3>Daily Inspiration</h3>
+          <p>
+            Find daily inspiration through curated quotes, affirmations, and motivational 
+            content. Let uplifting words guide you through challenging moments.
+          </p>
+          <ul class="feature-list">
+            <li><i class="fas fa-check"></i> Daily inspiration</li>
+            <li><i class="fas fa-check"></i> Positive affirmations</li>
+            <li><i class="fas fa-check"></i> Community quotes</li>
+          </ul>
+          <a href="#inspiration" class="card-link">
+            <span>Get Inspired</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-left">
+          <div class="about-visual">
+            <div class="about-image-container">
+              <div class="about-placeholder">
+                <div class="placeholder-content">
+                  <i class="fas fa-users"></i>
+                  <span>Together We Heal</span>
+                </div>
+              </div>
+              <div class="about-card card-top">
+                <div class="card-icon">
+                  <i class="fas fa-users"></i>
+                </div>
+                <div class="card-info">
+                  <h4>10K+</h4>
+                  <p>Community Members</p>
+                </div>
+              </div>
+              <div class="about-card card-bottom">
+                <div class="card-icon">
+                  <i class="fas fa-shield-heart"></i>
+                </div>
+                <div class="card-info">
+                  <h4>100%</h4>
+                  <p>Safe & Confidential</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-right">
+          <div class="section-tag">
+            <i class="fas fa-info-circle"></i>
+            <span>About Us</span>
+          </div>
+          <h2 class="section-title">
+            About
+            <span class="gradient-text">SafeHearts</span>
+          </h2>
+          <p class="about-text">
+            At SafeHearts, we're dedicated to raising mental health awareness while providing 
+            a safe, welcoming platform for people to share their stories and find support.
+          </p>
+          <p class="about-text">
+            We believe everyone deserves access to reliable mental health information and a 
+            supportive community. Our mission is to break the stigma and create a space where 
+            people feel empowered to seek help.
+          </p>
+
+          <div class="values-grid">
+            <div class="value-item">
+              <div class="value-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <div class="value-content">
+                <h4>Safe Space</h4>
+                <p>Judgment-free zone for all</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <div class="value-icon">
+                <i class="fas fa-lock"></i>
+              </div>
+              <div class="value-content">
+                <h4>Confidential</h4>
+                <p>Your privacy is priority</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <div class="value-icon">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="value-content">
+                <h4>Compassionate</h4>
+                <p>Empathy in every interaction</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <div class="value-icon">
+                <i class="fas fa-globe"></i>
+              </div>
+              <div class="value-content">
+                <h4>Inclusive</h4>
+                <p>Welcoming everyone, everywhere</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="#contact" class="btn btn-primary">
+            <span>Learn More</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stories Section -->
+  <section class="stories" id="stories">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">
+          <i class="fas fa-book-open"></i>
+          <span>Community Stories</span>
+        </div>
+        <h2 class="section-title">
+          Real Stories, Real
+          <span class="gradient-text">Hope</span>
+        </h2>
+        <p class="section-subtitle">
+          Inspiring journeys from community members who found strength in sharing
+        </p>
+      </div>
+
+      <div class="stories-container">
+        <div class="stories-slider" id="storiesSlider">
+          <div class="story-card">
+            <div class="story-header">
+              <div class="story-avatar">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="story-meta">
+                <h4>Sarah M.</h4>
+                <span>2 months ago</span>
+              </div>
+              <div class="story-tag">Anxiety</div>
+            </div>
+            <div class="story-body">
+              <i class="fas fa-quote-left quote-icon"></i>
+              <p>
+                "For years, I struggled with anxiety in silence. Finding SafeHearts 
+                changed everything. Reading others' stories made me realize I wasn't 
+                alone. Sharing my journey helped me heal."
+              </p>
+            </div>
+            <div class="story-footer">
+              <button class="reaction-btn">
+                <i class="fas fa-heart"></i>
+                <span>245</span>
+              </button>
+              <button class="reaction-btn">
+                <i class="fas fa-hands-helping"></i>
+                <span>Support</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="story-card">
+            <div class="story-header">
+              <div class="story-avatar">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="story-meta">
+                <h4>James K.</h4>
+                <span>1 month ago</span>
+              </div>
+              <div class="story-tag">Depression</div>
+            </div>
+            <div class="story-body">
+              <i class="fas fa-quote-left quote-icon"></i>
+              <p>
+                "Depression made me feel isolated. SafeHearts gave me a platform 
+                where I could express myself without fear. The community reminded 
+                me that recovery is possible."
+              </p>
+            </div>
+            <div class="story-footer">
+              <button class="reaction-btn">
+                <i class="fas fa-heart"></i>
+                <span>312</span>
+              </button>
+              <button class="reaction-btn">
+                <i class="fas fa-hands-helping"></i>
+                <span>Support</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="story-card">
+            <div class="story-header">
+              <div class="story-avatar">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="story-meta">
+                <h4>Maria L.</h4>
+                <span>3 weeks ago</span>
+              </div>
+              <div class="story-tag">PTSD</div>
+            </div>
+            <div class="story-body">
+              <i class="fas fa-quote-left quote-icon"></i>
+              <p>
+                "After my traumatic experience, I didn't know where to turn. 
+                SafeHearts provided not just information, but a community that 
+                truly understood. This platform saved my life."
+              </p>
+            </div>
+            <div class="story-footer">
+              <button class="reaction-btn">
+                <i class="fas fa-heart"></i>
+                <span>189</span>
+              </button>
+              <button class="reaction-btn">
+                <i class="fas fa-hands-helping"></i>
+                <span>Support</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="story-card">
+            <div class="story-header">
+              <div class="story-avatar">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="story-meta">
+                <h4>David R.</h4>
+                <span>1 week ago</span>
+              </div>
+              <div class="story-tag">OCD</div>
+            </div>
+            <div class="story-body">
+              <i class="fas fa-quote-left quote-icon"></i>
+              <p>
+                "Living with OCD was challenging. SafeHearts educated me about 
+                my condition and connected me with others who truly got it. 
+                I'm finally living the life I want."
+              </p>
+            </div>
+            <div class="story-footer">
+              <button class="reaction-btn">
+                <i class="fas fa-heart"></i>
+                <span>156</span>
+              </button>
+              <button class="reaction-btn">
+                <i class="fas fa-hands-helping"></i>
+                <span>Support</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="slider-controls">
+          <button class="slider-btn prev-btn" id="prevBtn">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="slider-dots" id="sliderDots"></div>
+          <button class="slider-btn next-btn" id="nextBtn">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="stories-cta">
+        <div class="cta-content">
+          <h3>Ready to Share Your Story?</h3>
+          <p>Your journey could inspire and help someone else. Share anonymously and safely.</p>
+          <a href="#" class="btn btn-primary">
+            <i class="fas fa-pen"></i>
+            <span>Share Your Story</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Inspiration Section -->
+  <section class="inspiration" id="inspiration">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">
+          <i class="fas fa-lightbulb"></i>
+          <span>Daily Inspiration</span>
+        </div>
+        <h2 class="section-title">
+          Quotes to
+          <span class="gradient-text">Uplift</span>
+          Your Spirit
+        </h2>
+      </div>
+
+      <div class="quotes-grid">
+        <div class="quote-card">
+          <div class="quote-icon">
+            <i class="fas fa-quote-left"></i>
+          </div>
+          <p class="quote-text">
+            "You don't have to be positive all the time. Having feelings doesn't 
+            make you negative. It makes you human."
+          </p>
+          <div class="quote-author">— Lori Deschene</div>
+        </div>
+
+        <div class="quote-card featured">
+          <div class="quote-icon">
+            <i class="fas fa-quote-left"></i>
+          </div>
+          <p class="quote-text">
+            "Mental health problems don't define who you are. You are the calm 
+            in the storm. You are the light in the darkness."
+          </p>
+          <div class="quote-author">— Unknown</div>
+        </div>
+
+        <div class="quote-card">
+          <div class="quote-icon">
+            <i class="fas fa-quote-left"></i>
+          </div>
+          <p class="quote-text">
+            "Recovery is not one and done. It is a lifelong journey that takes 
+            place one day, one step at a time."
+          </p>
+          <div class="quote-author">— Unknown</div>
+        </div>
+
+        <div class="quote-card">
+          <div class="quote-icon">
+            <i class="fas fa-quote-left"></i>
+          </div>
+          <p class="quote-text">
+            "You are allowed to be both a masterpiece and a work in progress 
+            simultaneously."
+          </p>
+          <div class="quote-author">— Sophia Bush</div>
+        </div>
+
+        <div class="quote-card">
+          <div class="quote-icon">
+            <i class="fas fa-quote-left"></i>
+          </div>
+          <p class="quote-text">
+            "Your illness does not define you. Your strength and courage do."
+          </p>
+          <div class="quote-author">— Unknown</div>
+        </div>
+
+        <div class="quote-card">
+          <div class="quote-icon">
+            <i class="fas fa-quote-left"></i>
+          </div>
+          <p class="quote-text">
+            "The bravest thing I ever did was continuing my life when the only 
+            thing I wanted was to stop."
+          </p>
+          <div class="quote-author">— Unknown</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resources Section -->
+  <section class="resources" id="resources">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">
+          <i class="fas fa-book"></i>
+          <span>Helpful Resources</span>
+        </div>
+        <h2 class="section-title">
+          Tools for Your
+          <span class="gradient-text">Wellness</span>
+        </h2>
+      </div>
+
+      <div class="resources-grid">
+        <div class="resource-card">
+          <div class="resource-icon">
+            <i class="fas fa-brain"></i>
+          </div>
+          <h3>Understanding Anxiety</h3>
+          <p>Learn about anxiety disorders, symptoms, and effective coping strategies.</p>
+          <a href="#" class="resource-link">
+            <span>Read Guide</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="resource-card">
+          <div class="resource-icon">
+            <i class="fas fa-cloud-rain"></i>
+          </div>
+          <h3>Managing Depression</h3>
+          <p>Explore treatment options, lifestyle changes, and support systems.</p>
+          <a href="#" class="resource-link">
+            <span>Read Guide</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="resource-card">
+          <div class="resource-icon">
+            <i class="fas fa-bed"></i>
+          </div>
+          <h3>Sleep & Mental Health</h3>
+          <p>Discover the connection between sleep quality and mental wellbeing.</p>
+          <a href="#" class="resource-link">
+            <span>Read Guide</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="resource-card">
+          <div class="resource-icon">
+            <i class="fas fa-spa"></i>
+          </div>
+          <h3>Mindfulness & Meditation</h3>
+          <p>Guided practices to reduce stress and improve mental clarity.</p>
+          <a href="#" class="resource-link">
+            <span>Read Guide</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="resource-card">
+          <div class="resource-icon">
+            <i class="fas fa-running"></i>
+          </div>
+          <h3>Exercise & Wellness</h3>
+          <p>How physical activity can boost your mood and mental health.</p>
+          <a href="#" class="resource-link">
+            <span>Read Guide</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="resource-card">
+          <div class="resource-icon">
+            <i class="fas fa-phone-alt"></i>
+          </div>
+          <h3>Crisis Helplines</h3>
+          <p>Immediate support numbers for when you need someone to talk to.</p>
+          <a href="#" class="resource-link">
+            <span>View Numbers</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">
+          <i class="fas fa-envelope"></i>
+          <span>Get In Touch</span>
+        </div>
+        <h2 class="section-title">
+          Want to Stay
+          <span class="gradient-text">Connected</span>?
+        </h2>
+      </div>
+
+      <div class="contact-content">
+        <div class="contact-left">
+          <h3>Reach Out to Us</h3>
+          <p>
+            Whether you need support, want to share your story, or have questions, 
+            we're here for you. Every message matters.
+          </p>
+
+          <div class="contact-cards">
+            <div class="contact-card">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-info">
+                <h4>Email Us</h4>
+                <a href="mailto:support@safehearts.com">support@safehearts.com</a>
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-icon">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <div class="contact-info">
+                <h4>Helpline</h4>
+                <a href="tel:+234800SAFEHEART">+234 800 SAFEHEART</a>
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-icon">
+                <i class="fas fa-comments"></i>
+              </div>
+              <div class="contact-info">
+                <h4>Live Chat</h4>
+                <p>Available 24/7</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="emergency-box">
+            <div class="emergency-icon">
+              <i class="fas fa-exclamation-triangle"></i>
+            </div>
+            <div class="emergency-content">
+              <h4>In Crisis?</h4>
+              <p>If you or someone you know is in immediate danger, please call emergency services right away.</p>
+              <a href="tel:911" class="emergency-btn">
+                <i class="fas fa-phone-alt"></i>
+                <span>Call Emergency</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-right">
+          <div class="contact-form-wrapper">
+            <h3>Send Us a Message</h3>
+            <form class="contact-form" id="contactForm">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="How should we address you?" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="your.email@example.com" required />
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <select id="subject" name="subject" required>
+                  <option value="">Select a topic</option>
+                  <option value="support">I need support</option>
+                  <option value="share">I want to share my story</option>
+                  <option value="resources">Question about resources</option>
+                  <option value="volunteer">I want to volunteer</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Tell us how we can help..." required></textarea>
+              </div>
+              <div class="form-checkbox">
+                <input type="checkbox" id="anonymous" name="anonymous" />
+                <label for="anonymous">I prefer to remain anonymous</label>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full">
+                <i class="fas fa-paper-plane"></i>
+                <span>Send Message</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section footer-brand">
+          <a href="#home" class="logo">
+            <div class="logo-icon">
+              <i class="fas fa-heart-pulse"></i>
+            </div>
+            <span class="logo-text">Safe<span>Hearts</span></span>
+          </a>
+          <p>
+            A safe, welcoming platform dedicated to mental health awareness, 
+            support, and community. You are not alone.
+          </p>
+          <div class="footer-social">
+            <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#stories">Stories</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Anxiety Guide</a></li>
+            <li><a href="#">Depression Support</a></li>
+            <li><a href="#">Meditation</a></li>
+            <li><a href="#">Crisis Helplines</a></li>
+            <li><a href="#">Self-Care Tips</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Community Guidelines</a></li>
+            <li><a href="#">Report Concern</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 SafeHearts. All rights reserved. Made with <i class="fas fa-heart"></i> for mental health awareness.</p>
+        <p class="disclaimer">
+          <i class="fas fa-info-circle"></i>
+          SafeHearts provides information and support, but is not a substitute for professional mental health care.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" title="Back to Top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Crisis Banner -->
+  <div class="crisis-banner" id="crisisBanner">
+    <div class="crisis-content">
+      <i class="fas fa-exclamation-triangle"></i>
+      <p><strong>In crisis?</strong> Talk to someone now.</p>
+      <a href="tel:911" class="crisis-btn">Call Help</a>
+      <button class="crisis-close" id="crisisClose">
+        <i class="fas fa-times"></i>
       </button>
-      <i class="fa-solid fa-bars" id="hamburger"></i>
-      <i class="fa-solid fa-xmark" id="close-icon"></i>
     </div>
   </div>
 
-  <nav class="navbar" id="navbar">
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About-us</a></li>
-      <li><a href="#">Share Your Story</a></li>
-      <li><a href="#">Story Wall</a></li>
-      <li><a href="#">Contact-us</a></li>
-      <li><a href="#">FAQ</a></li>
-      <li><a href="#">Quotes & Inspirations</a></li>
-    </ul>
-  </nav>
-</header>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-content">
-    <h1 class="hero-text">
-      Find reliable information on<br>
-      mental health conditions instantly.
-    </h1>
-    <a href="#" class="get-startedbutton">Get Started</a>
-  </div>
-
-  <img src="images/brain-removebg-preview 2.png" alt="brain" class="imageone">
-</section>
-
-<!-- OFFER -->
-<section class="hero2">
-  <h2 class="offer">What We Offer</h2>
-
-  <div class="layout">
-    <div class="learn">
-      <i class="fa-solid fa-lightbulb"id='lightbulb'></i>
-      <p class="info">Learning More On Mental Health</p>
-    </div>
-
-    <div class="learn">
-      <i class="fa-solid fa-pen"id='pen'></i>
-      <p class="info">Share Your Story</p>
-    </div>
-
-    <div class="learn">
-      <i class="fa-solid fa-quote-left" id="quote"></i>
-      <p class="info">Quotes and Inspirations</p>
-    </div>
-  </div>
-</section>
-
-<!-- AGENCY -->
-<section class="hero3">
-  <div class="agency-text">
-    <h2 class="agency">Our Agency</h2>
-    <p class="detail">
-      At SafeHearts, we are dedicated to raising awareness
-      about mental health while providing a safe,
-      welcoming, and user-friendly platform
-      for people to share their stories.
-    </p>
-    <a href="#" class="learnmore">Learn More</a>
-  </div>
-
-  <img src="images/safehearts company.jpg" alt="agency" class="imagetwo">
-</section>
-
-<!-- CONTACT -->
-<section class="hero4">
-  <h2 class="connected">Want to stay connected?</h2>
-  <a href="#" class="contact">Contact-us</a>
-</section>
-
-<footer>
-  <p>&copy; Annabel2025. All rights reserved</p>
-</footer>
-
-<!-- JS -->
-<script src="home.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
